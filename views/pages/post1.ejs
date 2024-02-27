@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning JavaScript Blog</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/commentbox.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <%- include('../partials/header')%>
+        <h1><%= post.title %></h1>
+
+        <p>How do you learn Javascript? Tell us something about your learning Journey!</p>
+
+        <!-- Apply the comment-box style to the comment box -->
+        <div class="commentbox">
+            <h2>Blog Comments:</h2>
+
+            <form class="comment-form" action="/comment/<%= post.id %>" method="post">
+                <input type="text" name="name" placeholder="Your Name" required> <!-- New field for name -->
+                <input type="text" name="comment" placeholder="Type your comment here" required>
+                <button class="comment-button" type="submit">Submit Comment</button>
+            </form>
+
+            <% if (post.comments && post.comments.length > 0) { %>
+                <ul>
+                    <% 
+                        // Use slice to get the latest 8 comments
+                        const latestComments = post.comments.slice(0,8);
+                        latestComments.forEach((comment) => { %>
+                        <p><%= comment %></p>
+                    <% }); %>
+                </ul>
+            <% } %>
+    </div>
+
+    <%- include('../partials/footer')%>
+</body>
+</html>
