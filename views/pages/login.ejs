@@ -28,34 +28,35 @@
 
         <div class="form-box login">
             <h2>Login</h2>
-            <form action="/login" method="post">
+            <form action="/login" method="post" id="loginForm">
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="person-circle-outline"></ion-icon>
                     </span>
-                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="text" name="username" placeholder="Username" required value="<%= rememberMe && savedUsername ? savedUsername : '' %>">
                     <label>Username</label>
                 </div>
                 <div class="input-box">
                     <span class="icon">
                         <ion-icon name="lock-closed"></ion-icon>
                     </span>
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password" placeholder="Password" required
+                    value="<%= rememberMe && savedPassword ? savedPassword : '' %>">
                     <label>Password</label>
                 </div>
                 <div class="remember-forgot">
-                    <label><input type="checkbox"> Remember me</label>
-                    <a href="#">Forgot Password?</a>
+                    <label><input type="checkbox"  name="rememberMe" id="rememberMe" <%= rememberMe === 'true' ? 'checked' : '' %>> Remember me</label>
+                    <a href="forgot-password">Forgot Password?</a>
                 </div>
                 <button type="submit" class="btn">Login</button>
                 <div class="login-register">
-                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
-                    <p>Sign in as <a href="#" class="register-link">Demo User</a></p>
+                    <p>Don't have an account? <a href="Register" class="register-link">Register</a></p>
+                    <p>Sign in as <a href="404" class="register-link">Demo User</a></p>
                 </div>
             </form>
         </div>
 
-        <div class="form-box register">
+        <!--div class="form-box register">
             <h2>Registration</h2>
             <form action="#">
                 <div class="input-box">
@@ -83,15 +84,15 @@
                     <label><input type="checkbox"> I agree to the terms & conditions</label>
                 </div>
                 <button type="submit" class="btn">Register</button>
-                <div class="login-register">
+                <div-- class="login-register">
                     <p>Already have an account? <a href="#" class="login-link">Login</a></p>
-                </div>
+                </div-->
             </form>
         </div>
     </div>
 
 
-  
+    
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <%- include('../partials/footer')%>

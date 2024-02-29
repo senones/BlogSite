@@ -1,0 +1,64 @@
+.wrappermail {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+.wrappermail h2{
+    color:#fff;
+}
+  form {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(245, 240, 240);
+  }
+  
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  form input[type="submit"] {
+    background-color: #162938;
+    color: #fff;
+    border: solid;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #0d6aee;
+  }
+
+  
+.About p  {
+font-size: 20px;
+
+}
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
