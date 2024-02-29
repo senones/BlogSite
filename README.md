@@ -19,7 +19,7 @@ Backend: Node.js, Express.js,
 
 Getting Started:
 
-Clone the repository: git clone https://github.com/your-username/your-blog.git
+
 Install dependencies: npm install
 Configure [specific configurations if any].
 Run the application: npm start AND node app.js
