@@ -117,6 +117,7 @@ app.post('/forgot-password', (req, res) => {
 // Handle the /Register route
 app.get('/Register', (req, res) => {
     res.render('pages/Register'); // Register page
+});
 
 app.post('/Register', (req, res) => {
     // Implement the logic to send a password reset email
@@ -131,7 +132,6 @@ app.post('/Register', (req, res) => {
 app.get('/404', (req, res) => {
     res.render('pages/404'); // 404 page
 });
-
 
 
 app.listen(port, () => {
