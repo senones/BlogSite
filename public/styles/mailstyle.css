@@ -53,12 +53,21 @@
 font-size: 20px;
 
 }
+
+
   footer {
     position: fixed;
     bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
-    background-color: black;
     color: white;
     text-align: center;
-    padding: 10px;
-  }
+    padding: 0.5px;
+    transition: bottom 1s ease; /* Smooth transition animation */
+    backdrop-filter: blur(10px); /* Add a blur effect to the footer */
+}
+
+.footer:hover {
+    bottom: 10px; /* Zeige den Footer beim Überfahren mit der Maus */
+}
