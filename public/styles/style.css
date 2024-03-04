@@ -48,6 +48,9 @@ body {
     background: url('./background.jpg') fixed;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
@@ -422,7 +425,7 @@ form {
 
 
 
-  footer {
+ footer {
     position: fixed;
     bottom: 0;
     left: 50%;
@@ -431,11 +434,14 @@ form {
     color: white;
     text-align: center;
     padding: 0.5px;
-    transition: bottom 1s ease; /* Smooth transition animation */
     backdrop-filter: blur(10px); /* Add a blur effect to the footer */
+    transition: bottom 1s ease, opacity 0.5s ease; /* Smooth transition animation for bottom and opacity */
+    backdrop-filter: blur(10px); /* Add a blur effect to the footer */
+    opacity: 0; /* Set initial opacity to 0 */
 }
 
 .footer:hover {
     bottom: 10px; /* Zeige den Footer beim Überfahren mit der Maus */
+    opacity: 1; /* Set opacity to 1 on hover */
 }
 
